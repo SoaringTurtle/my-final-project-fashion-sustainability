@@ -1,0 +1,86 @@
+@import url(bootstrap.min.css);
+@import url(../fonts/fonts.css);
+
+html,body{
+  overflow-x: hidden;
+}
+
+
+/* fonts */
+body{
+	font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+	color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.lead-description{
+	font-family: Georgia, serif;
+}
+
+
+/* CSS for hero image, either background photo or background video */
+.hero{
+  background-image: url("../assets/sample-images/desk.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  color: #ffffff;
+  position: relative;
+}
+.hero header{
+  background-color:rgba(0,0,0,0.75);
+
+}
+.hero header > *{
+  position: relative;
+  z-index: 10;
+}
+.hero video{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  height: 100vh;
+  width: auto;
+  z-index: 1 !important;
+}
+@media (min-aspect-ratio:16/9){
+  .hero video{
+    width: 100vw;
+    height: auto;
+  }
+}
+
+
+/* helper */
+.vh-200{ height: 200vh;}
+.vh-300{ height: 300vh;}
+.vh-400{ height: 400vh;}
+.vh-500{ height: 500vh;}
+.vh-600{ height: 600vh;}
+
+
+
+/* Sticky graphic */
+.scroll-graphic{
+  background-color:#000;
+  z-index: -2;
+}
+
+.image-holder{
+  background-image: url(../assets/sample-images/map-1.jpg);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-attachment: fixed;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
