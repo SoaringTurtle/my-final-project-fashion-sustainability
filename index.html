@@ -74,7 +74,7 @@
         </div>
       </div>
 
-<div class="row justify-content-center mt-5">
+      <div class="row justify-content-center mt-5">
         <div class="col-12 col-sm-8 col-md-6">
           <p>The fashion industry began in the early 19th century, and while clothing has existed for significantly longer, the industry today impacts almost everyone. Simple decisions such as deciding which fast fashion outlet clearance section to sift through are juxtaposed to low garment worker wages and the virtually impossible to precisely calculate impact on the planet. These facets of the industry are points of discussion when talking about the industry today, however, one aspect that does not get as much attention are the brand owners of smaller fashion companies.
 
@@ -95,16 +95,21 @@
           
   <!-- two side-by-side images, each column 6 -->
       <div class="row justify-content-center">
-        <div class="col-6">
+        <div class="col-4">
           <a href="drewjoiner/index.html">
-          <img src="../assets/sample-images/Drew Joiner Portraint.jpg" class="img-fluid" alt="Drew Joiner Shot">
-            </div>
-        <div class="row justify-content-center">
-        <div class="col-6">
+            <img src="../assets/sample-images/Drew Joiner Portraint.jpg" class="img-fluid" alt="Drew Joiner Shot">
+          </a>
+        </div>
+        <div class="col-4">
           <a href="martinsanjuan/index.html">
-          <img src="../assets/sample-images/MSJP1.jpg" class="img-fluid" alt="Martin San Juan Portrait">
-       </div>
-      </div>
+            <img src="../assets/sample-images/MSJP1.jpg" class="img-fluid" alt="Martin San Juan Portrait">
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="martinsanjuan/index.html">
+            <img src="../assets/sample-images/MSJP1.jpg" class="img-fluid" alt="Martin San Juan Portrait">
+          </a>
+        </div>
       </div>
       
           
@@ -118,8 +123,32 @@
       
     </section>
     
-  </body>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-scroll-swap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/d3-5.9.7.min.js"></script>
+    <script>
+      jQuery(document).ready(function($){
+        
+        
+        $(".scroll-graphic").scrollSwap();
   
+        $('.fadein').css('opacity', 0);
+        
+        $(window).on('scroll', function(){
+          
+          $('.fadein').each(function(){
+            
+            if($(this).offset().top < $(window).scrollTop() + ($(window).height()/2) && $(this).css('opacity') == 0){
+              $(this).animate({'opacity':1}, {duration:600, queue:false});
+            }
+            
+          });
+          
+        });
+      });
+    </script>
+  </body>
 </html>
       
       

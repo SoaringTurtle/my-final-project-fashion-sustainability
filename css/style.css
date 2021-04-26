@@ -110,3 +110,7 @@ h1, h2, h3, h4, h5, h6 {
 .bg-light{
   background-color: rgba(248,249,250,0.75);
 }
+
+[data-bs-popup-image]{
+  cursor: pointer;
+}
