@@ -21,7 +21,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* CSS for hero image, either background photo or background video */
 .hero{
-  background-image: url("../assets/sample-images/desk.jpg");
+  background-image: url("../assets/sample-images/denim.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  color: #ffffff;
+  position: relative;
+}
+.hero2{
+  background-image: url("../assets/sample-images/leather.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -67,6 +76,14 @@ h1, h2, h3, h4, h5, h6 {
 .scroll-graphic{
   background-color:#000;
   z-index: -2;
+  overflow: hidden;
+/*change next line to set first scrolling image*/
+  background-image: url(../assets/sample-images/denim.jpg);
+  background-attachment: fixed;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .image-holder{
@@ -84,3 +101,12 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center;
 }
 
+.spaced{
+  margin-top: 100vh; 
+  margin-bottom: 100vh;
+  
+}
+
+.bg-light{
+  background-color: rgba(248,249,250,0.75);
+}
