@@ -68,25 +68,21 @@
     
     
     <section class="container-fluid" role="main">
-      
-      
-<!--
-      
-      
-      Opening Quote Option 1
-      <div class="row justify-content-center mt-5">
-        <div class="col-12 col-sm-8 lead-description">
-          <p class="h3 text-center" fadein>"Fashion is kinda a joke. I don't get too bogged down in the clothes. For me, it's one big art project, just a canvas to show that fashion should have a brand which has someone behind it who cares about different contexts. Social things." -Virgil Abloh</p>
-        </div>
-      </div>
-      
--->
+    
 
 
       <div class="row justify-content-center mt-5">
         <div class="col-12 col-sm-8 col-md-6">
           <p class="fadein">In February of 2010, HBO released How To Make It In America, a show following young adults Ben Epstein and Cam  Calderon as they attempt to start a denim brand in the lively New York City fashion scene and in turn the “American Dream.” The quote above highlights a scene from the season 1 finale in which mutual friend of Ben and Cam, Domingo. While sitting in a park, Domingo begins to recount the story of his uncle Julius.  At this point in the show, both Ben and Cam have experienced setback, after setback on their path to success and after a delivery truck full of their product is stolen, the duo are worried for their future in the industry.
           </p>
+          
+          
+          <p class="fadein">
+            <a href="#" data-youtube="https://www.youtube.com/embed/9Bmpi-7RvXo" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+            Click to see video
+            </a>
+          </p>
+          
           
           <p class="fadein"> When all seems lost, Domingo’s exclamation that, “You just gotta roll with those fucking punches,” encapsulates the central message of the show. The road to achieving the American Dream is neither easy, nor does it come without adversity, but having the ability to persevere through it all has the ability to turn dreams into reality. The struggles highlighted in How To Make It In America correlate more than a decade later as a new generation of designers rises to the challenge.
           </p>
@@ -120,7 +116,24 @@
         </div>
       </div>
       
+      <div style="height: 25vh;">
+      
+      </div>
+      
     </section>
+    
+    <div class="modal" tabindex="-1" id="exampleModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-scroll-swap.js"></script>
@@ -128,6 +141,34 @@
     <script type="text/javascript" src="js/d3-5.9.7.min.js"></script>
     <script>
       jQuery(document).ready(function($){
+        
+         var exampleModal = document.getElementById('exampleModal');
+        
+        exampleModal.addEventListener('show.bs.modal', function (event) {
+          event.preventDefault();
+          // Button that triggered the modal
+          var button = event.relatedTarget;
+          // Extract info from data-bs-* attributes
+          var image = button.getAttribute('data-bs-popup-image');
+          var caption = button.getAttribute('data-bs-popup-caption');
+          var youtube = button.getAttribute('data-youtube');
+          var audio = button.getAttribute('data-audio');
+          var modalBodyInput = exampleModal.querySelector('.modal-body')
+
+          if(youtube){
+            modalBodyInput.innerHTML = '<div class="ratio ratio-16x9"><iframe src="' + youtube + '" width="100%" height="100%" frameborder="0" scrolling="no"></iframe></div>';
+            
+          } if(audio) {
+            modalBodyInput.innerHTML = '<audio src="' + audio + '" width="100%" frameborder="0" scrolling="no"></audio>';
+          }else {
+            modalBodyInput.innerHTML = '<img src="' + image + '" class="img-fluid"><br><small>' + caption + '</small>';
+          }
+        });
+        
+        exampleModal.addEventListener('hidden.bs.modal', function(){
+          $("#exampleModal iframe").removeAttr('src');
+          $("#exampleModal audio").removeAttr('src');
+        });
         
         
         $(".scroll-graphic").scrollSwap();
