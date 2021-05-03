@@ -14,8 +14,13 @@ body{
 h1, h2, h3, h4, h5, h6 {
 	font-family: Georgia, "Times New Roman", Times, serif;
 }
+
 .lead-description{
 	font-family: Georgia, serif;
+}
+
+.front .hero h1{
+  padding-top: 40vh;
 }
 
 
@@ -47,10 +52,18 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
   position: relative;
 }
-.hero header{
-  background-color:rgba(0,0,0,0.75);
 
+
+/* BACKGROUND OPACITY OF THE HERO BACKGROUND */
+.elwood .hero header,
+.martin .hero header{
+  background-color:rgba(0,0,0,0.75);
 }
+.drew .hero header{
+  background-color:rgba(0,0,0,0.35);
+}
+
+
 .hero header > *{
   position: relative;
   z-index: 10;

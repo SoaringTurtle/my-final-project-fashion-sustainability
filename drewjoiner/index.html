@@ -48,7 +48,7 @@
 
     <title>Fashion Forward: Small Creators, The Fashion Industry, and Surviving Covid-19</title>
   </head>
-  <body>
+  <body class="drew">
     
     
     
@@ -379,10 +379,10 @@
     <footer class="my-5 text-center">
       <p>Website by Isaiah Polite.</p>
       <nav class="socialmedia text-center">
-        <a href="#" title="Twitter"><img src="assets/social-media-icons/twitter.svg" alt="Social Media Icon" class="d-inline p-2" width="40" height="auto"></a>
-        <a href="#" title="Facebook"><img src="assets/social-media-icons/facebook.svg" alt="Social Media Icon" class="d-inline p-2" width="40" height="auto"></a>
-        <a href="#" title="Instagram"><img src="assets/social-media-icons/instagram.svg" alt="Social Media Icon" class="d-inline p-2" width="40" height="auto"></a>
-        <a href="#" title="YouTube"><img src="assets/social-media-icons/youtube.svg" alt="Social Media Icon" class="d-inline p-2" width="40" height="auto"></a>
+        <a href="#" title="Twitter"><img src="../assets/social-media-icons/twitter.svg" alt="Social Media Icon" class="d-inline p-2" width="40" height="auto"></a>
+        <a href="#" title="Facebook"><img src="../assets/social-media-icons/facebook.svg" alt="Social Media Icon" class="d-inline p-2" width="40" height="auto"></a>
+        <a href="#" title="Instagram"><img src="../assets/social-media-icons/instagram.svg" alt="Social Media Icon" class="d-inline p-2" width="40" height="auto"></a>
+        <a href="#" title="YouTube"><img src="../assets/social-media-icons/youtube.svg" alt="Social Media Icon" class="d-inline p-2" width="40" height="auto"></a>
       </nav>    
     </footer>
     
@@ -438,8 +438,8 @@
           
           $('.fadein').each(function(){
             
-            if($(this).offset().top < $(window).scrollTop() + ($(window).height()/2) && $(this).css('opacity') == 0){
-              $(this).animate({'opacity':1}, {duration:600, queue:false});
+            if($(this).offset().top < $(window).scrollTop() + ($(window).height()*.75) && $(this).css('opacity') == 0){
+              $(this).animate({'opacity':1}, {duration:400, queue:false});
             }
             
           })
