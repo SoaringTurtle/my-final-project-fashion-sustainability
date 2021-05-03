@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* CSS for hero image, either background photo or background video */
 .hero{
-  background-image: url("../assets/sample-images/fabric.jpeg");
+  background-image: url("../assets/sample-images/drewjoinerfabric.JPG");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -30,7 +30,16 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 .hero2{
-  background-image: url("../assets/sample-images/leather.jpg");
+  background-image: url("../assets/sample-images/sanjuanfabric.JPG");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  color: #ffffff;
+  position: relative;
+}
+.hero3{
+  background-image: url("../assets/sample-images/slowjamzfabric.JPG");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -78,7 +87,21 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -2;
   overflow: hidden;
 /*change next line to set first scrolling image*/
-  background-image: url(../assets/sample-images/fabric.jpeg);
+  background-image: url(../assets/sample-images/sanjuanfabric.JPG);
+  background-attachment: fixed;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.scroll-graphic2{
+  background-color:#000;
+  z-index: -2;
+  overflow: hidden;
+/*change next line to set first scrolling image*/
+  background-image: url(../assets/sample-images/slowjamzfabric.JPG);
   background-attachment: fixed;
   background-color: #000000;
   background-repeat: no-repeat;
